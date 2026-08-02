@@ -2,139 +2,453 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soumojit Saha | Personal Website</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Soumojit Saha | Developer Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <h2>Soumojit Saha</h2>
+    <header>
+        <nav class="navbar">
 
-        <div class="links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+            <a href="#home" class="logo">
+                SS<span>.</span>
+            </a>
 
-    <!-- Home -->
-    <section class="hero" id="home">
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </div>
 
-        <img src="images/profile.jpg" alt="Profile Picture">
+            <button
+                id="themeButton"
+                class="theme-button"
+                onclick="toggleTheme()"
+            >
+                🌙
+            </button>
 
-        <div class="hero-text">
-            <h1>Hi, I'm Soumojit Saha</h1>
+        </nav>
+    </header>
 
-            <p>
-                Student • Aspiring Software Developer • Learning HTML & CSS
-            </p>
-        </div>
+    <main>
 
-    </section>
+        <!-- Hero -->
+        <section id="home" class="hero">
 
-    <!-- About -->
-    <section id="about">
+            <div class="hero-content">
 
-        <h2>About Me</h2>
+                <p class="small-heading">
+                    HELLO, MY NAME IS
+                </p>
+
+                <h1>
+                    Soumojit <span>Saha</span>
+                </h1>
+
+                <h2>
+                    Student and aspiring software developer
+                </h2>
+
+                <p class="hero-description">
+                    I enjoy creating websites, learning new technology,
+                    and solving coding problems through creative projects.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="primary-button">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="secondary-button">
+                        Contact Me
+                    </a>
+
+                </div>
+
+                <!-- Welcome feature -->
+                <div class="welcome-feature">
+
+                    <input
+                        type="text"
+                        id="visitorName"
+                        placeholder="What's your name?"
+                    >
+
+                    <button onclick="welcomeVisitor()">
+                        Say Hello
+                    </button>
+
+                    <p id="welcomeResult"></p>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image-area">
+
+                <div class="image-shape"></div>
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Soumojit Saha"
+                    class="profile-image"
+                    id="profileImage"
+                >
+
+                <div class="floating-card card-one">
+                    💻 Web Development
+                </div>
+
+                <div class="floating-card card-two">
+                    🚀 Future Developer
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about-section">
+
+            <div class="section-title">
+                <p>ABOUT ME</p>
+                <h2>Building skills one project at a time</h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I'm Soumojit Saha, a student interested in technology,
+                        programming, and web development. Through All Star Code,
+                        I have been learning HTML, CSS, Flexbox, JavaScript,
+                        Git, and GitHub.
+                    </p>
+
+                    <p>
+                        My goal is to continue improving my coding skills,
+                        create useful projects, and become a software developer
+                        in the future.
+                    </p>
+
+                </div>
+
+                <div class="facts-grid">
+
+                    <div class="fact-card">
+                        <span>01</span>
+                        <h3>Student</h3>
+                        <p>Learning technology and programming.</p>
+                    </div>
+
+                    <div class="fact-card">
+                        <span>02</span>
+                        <h3>Creator</h3>
+                        <p>Building websites and coding projects.</p>
+                    </div>
+
+                    <div class="fact-card">
+                        <span>03</span>
+                        <h3>Problem Solver</h3>
+                        <p>Finding solutions through code.</p>
+                    </div>
+
+                    <div class="fact-card">
+                        <span>04</span>
+                        <h3>Future Developer</h3>
+                        <p>Working toward a career in software.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="skills-section">
+
+            <div class="section-title">
+                <p>MY SKILLS</p>
+                <h2>Tools and technologies I use</h2>
+            </div>
+
+            <div class="skills-list">
+
+                <div class="skill">
+                    <div class="skill-top">
+                        <h3>HTML</h3>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-level html-level"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-top">
+                        <h3>CSS</h3>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-level css-level"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-top">
+                        <h3>JavaScript</h3>
+                        <span>65%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-level javascript-level"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-top">
+                        <h3>Git and GitHub</h3>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-level git-level"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects-section">
+
+            <div class="section-title">
+                <p>MY WORK</p>
+                <h2>Projects I have completed</h2>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+
+                    <div class="project-number">01</div>
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        A responsive personal website featuring JavaScript
+                        interactions, dark mode, and a contact section.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a
+                        href="https://sahasoumojit33-afk.github.io/personal-website/"
+                        target="_blank"
+                    >
+                        View Project →
+                    </a>
+
+                </article>
+
+                <article class="project-card">
+
+                    <div class="project-number">02</div>
+
+                    <h3>Flexbox Challenges</h3>
+
+                    <p>
+                        A collection of responsive page layouts created
+                        using CSS Flexbox.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Flexbox</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/sahasoumojit33-afk"
+                        target="_blank"
+                    >
+                        View GitHub →
+                    </a>
+
+                </article>
+
+                <article class="project-card">
+
+                    <div class="project-number">03</div>
+
+                    <h3>Navigation Bar Project</h3>
+
+                    <p>
+                        A clean and responsive navigation system designed
+                        for desktop and mobile screens.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Responsive</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/sahasoumojit33-afk"
+                        target="_blank"
+                    >
+                        View GitHub →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Interactive theme section -->
+        <section class="customizer-section">
+
+            <div class="customizer-box">
+
+                <div>
+                    <p class="small-heading">
+                        CUSTOMIZE THE PAGE
+                    </p>
+
+                    <h2>Choose an accent color</h2>
+
+                    <p>
+                        Use JavaScript to change the website's main color.
+                    </p>
+                </div>
+
+                <div class="color-options">
+
+                    <button
+                        class="color-circle blue"
+                        onclick="changeAccent('#5b5ff5')"
+                        aria-label="Blue theme"
+                    ></button>
+
+                    <button
+                        class="color-circle green"
+                        onclick="changeAccent('#10b981')"
+                        aria-label="Green theme"
+                    ></button>
+
+                    <button
+                        class="color-circle orange"
+                        onclick="changeAccent('#f97316')"
+                        aria-label="Orange theme"
+                    ></button>
+
+                    <button
+                        class="color-circle purple"
+                        onclick="changeAccent('#a855f7')"
+                        aria-label="Purple theme"
+                    ></button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+
+            <div class="contact-info">
+
+                <p class="small-heading">
+                    GET IN TOUCH
+                </p>
+
+                <h2>Let's connect</h2>
+
+                <p>
+                    You can contact me through email or visit my GitHub
+                    to view more of my coding work.
+                </p>
+
+                <a href="mailto:sahasoumojit33@gmail.com">
+                    ✉ sahasoumojit33@gmail.com
+                </a>
+
+                <a
+                    href="https://github.com/sahasoumojit33-afk"
+                    target="_blank"
+                >
+                    💻 github.com/sahasoumojit33-afk
+                </a>
+
+            </div>
+
+            <div class="contact-form">
+
+                <label for="contactName">Name</label>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Enter your name"
+                >
+
+                <label for="contactMessage">Message</label>
+
+                <textarea
+                    id="contactMessage"
+                    placeholder="Write your message"
+                ></textarea>
+
+                <button onclick="submitMessage()">
+                    Send Message
+                </button>
+
+                <p id="contactResult"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
 
         <p>
-            Hi! My name is Soumojit Saha. I'm a student passionate about technology and programming.
-            I'm currently learning HTML, CSS, and Flexbox through All Star Code. I enjoy building
-            websites, solving coding challenges, and hope to become a software developer in the future.
+            © <span id="currentYear"></span> Soumojit Saha
         </p>
 
-    </section>
+        <p>
+            Designed and coded by Soumojit
+        </p>
 
-    <!-- Skills -->
-    <section id="skills">
-
-        <h2>My Skills</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>HTML</h3>
-                <p>Building the structure of websites.</p>
-            </div>
-
-            <div class="card">
-                <h3>CSS</h3>
-                <p>Styling modern websites.</p>
-            </div>
-
-            <div class="card">
-                <h3>Flexbox</h3>
-                <p>Creating responsive layouts.</p>
-            </div>
-
-            <div class="card">
-                <h3>Git</h3>
-                <p>Tracking code and project versions.</p>
-            </div>
-
-            <div class="card">
-                <h3>GitHub</h3>
-                <p>Sharing and hosting coding projects.</p>
-            </div>
-
-            <div class="card">
-                <h3>Problem Solving</h3>
-                <p>Finding creative solutions to coding challenges.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-
-        <h2>Projects</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Navigation Bar</h3>
-                <p>Built a responsive navigation bar using HTML and CSS.</p>
-            </div>
-
-            <div class="card">
-                <h3>Flexbox Challenge</h3>
-                <p>Completed Flexbox layout challenges during All Star Code.</p>
-            </div>
-
-            <div class="card">
-                <h3>Personal Website</h3>
-                <p>Designed and built my own portfolio website using HTML, CSS, and Flexbox.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-
-        <h2>Contact Me</h2>
-
-        <p>Email: sahasoumojit33@gmail.com</p>
-
-        <a href="mailto:sahasoumojit33@gmail.com">📧 Email Me</a>
-
-        <br><br>
-
-        <a href="https://github.com/sahasoumojit33-afk" target="_blank">💻 Visit My GitHub</a>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Soumojit Saha. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
